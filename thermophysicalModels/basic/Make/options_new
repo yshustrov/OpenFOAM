@@ -1,0 +1,16 @@
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/thermophysicalProperties/lnInclude \
+    -I/home/yury/MutationPP/MutationPP/install/include/mutation++ 
+
+LIB_LIBS = \
+    -L/home/yury/MutationPP/MutationPP/install/lib \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lcompressibleTransportModels \
+    -lspecie \
+    -lthermophysicalProperties \
+    -lmutation++

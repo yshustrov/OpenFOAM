@@ -1,0 +1,1 @@
+/home/yury/OpenFOAM/OpenFOAM-v2112/src/thermophysicalModels/specie/transport/power/powerTransportI.H

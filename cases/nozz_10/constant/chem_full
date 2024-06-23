@@ -1,0 +1,103 @@
+elements        2(N e);
+
+species         5(N N2 E Np N2p);
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N2 = 2N + N2";
+        A               3.8e+16;
+        beta            -1;
+        Ta              113132.8807;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N2 + N = 3N";
+        A               1.3e+17;
+        beta            -1;
+        Ta              113132.8807;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N = N2p + E";
+        A               8500000;
+        beta            1;
+        Ta              67659.85887;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N = N + Np + E";
+        A               60;
+        beta            1.5;
+        Ta              168500.0326;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N2 + E = N2p + E + E";
+        A               2.3e+10;
+        beta            0.5;
+        Ta              180892.6803;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N + E = Np + E + E";
+        A               2.7e+10;
+        beta            0.5;
+        Ta              168500.0326;
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N + N2 = 2N2";
+        A               403273000;
+        beta            0;
+        Ta              -719.5730926;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "3N = N2 + N";
+        A               1379620000;
+        beta            0;
+        Ta              -719.5730926;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N2p + E = 2N";
+        A               9281200000;
+        beta            1;
+        Ta              -1654.018706;
+    }
+    un-named-reaction-9
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N + Np + E = 2N";
+        A               0.0007876496534;
+        beta            2.5;
+        Ta              -3148.132281;
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N2p + E + E = N2 + E";
+        A               266521;
+        beta            1.5;
+        Ta              -2278.648127;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "Np + E + E = N + E";
+        A               354442;
+        beta            1.5;
+        Ta              -3148.132281;
+    }
+}

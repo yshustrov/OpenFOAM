@@ -1,0 +1,39 @@
+elements        1(N);
+
+species         2(N N2);
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N2 = 2N + N2";
+        A               3.8e+16;
+        beta            -1;
+        Ta              113132.8807;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "N2 + N = 3N";
+        A               1.3e+17;
+        beta            -1;
+        Ta              113132.8807;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "2N + N2 = 2N2";
+        A               403273000;
+        beta            0;
+        Ta              -719.5730926;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "3N = N2 + N";
+        A               1379620000;
+        beta            0;
+        Ta              -719.5730926;
+    }
+}

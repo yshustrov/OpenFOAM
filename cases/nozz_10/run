@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#--------------------------------------------------------------------
+# Slurm script generator for running OpenFOAM cases on HPC clusters.
+#
+# Note:
+#   Please put this file in the root directory of the case.
+
+# Author:
+#   Dezhi Dai (dezhi.dai@mavs.uta.edu), MAE Department, UTA.
+#--------------------------------------------------------------------
+
+#-Modify this part if needed-----------------------------------------
+# Set the email, replace this by your own email address
+# email="shustrovya@gmail.com"
+# Set the flow solver
+flow_solver="rhoCentralReactingFoam"
+# Set the No. of nodes requested and total mpi tasks
+n_nodes="1"
+n_mpis="48"
+# Set the project to charge
+# proj="init_case_78k"
+# Set request time
+ time_request="300:00:00"
+#--------------------------------------------------------------------
+
+# Obtain current case directory and rootcase name
+case_dir=`pwd` case_name=`basename "$case_dir"`
+# Set the file name of the SLURM job script
+s_name="auto_slurm_job"
+
+# Write options and commands to the Slurm script
+# Header
+echo "#!/bin/bash" > $s_name
+
+# Slurm options
+echo "#SBATCH -J $case_name" >> $s_name
+#echo "#SBATCH -o $case_name.out" >> $s_name
+echo "#SBATCH -e $case_name.err" >> $s_name
+echo "#SBATCH -N $n_nodes -n $n_mpis" >> $s_name
+echo "#SBATCH -t $time_request" >> $s_name
+#echo "#SBATCH -A $proj" >> $s_name
+# echo "#SBATCH --mail-user=$email" >> $s_name
+# echo "#SBATCH --mail-type=all" >> $s_name
+
+# OpenFOAM commands
+# echo "decomposePar -case $case_dir -fileHandler collated" >> $s_name
+echo "mpirun -np $n_mpis $flow_solver -parallel -case $case_dir -fileHandler collated" >> $s_name
+#echo "reconstructPar -case $case_dir -fileHandler collated" >> $s_name
+echo "touch $case_dir/$case_name.foam" >> $s_name

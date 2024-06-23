@@ -1,0 +1,15 @@
+elements        2(AR AR2);
+
+species         1(AR);
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "3AR = AR2 + AR";
+        A               0.139833;
+        beta            -0.504;
+        Ta              0;
+    }
+}

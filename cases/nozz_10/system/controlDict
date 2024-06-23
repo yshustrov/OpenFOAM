@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// swak4Foam libraries
+
+application     rhoReactingCentralFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         5e-3;
+
+deltaT          1e-11;
+
+writeControl    adjustableRunTime;
+
+writeInterval	1e-4;
+
+purgeWrite      0;
+
+writeFormat     binary; //ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+adjustTimeStep  yes;
+
+useAcousticCourant yes;
+
+maxCo           0.15;
+maxDeltaT		1e-6;
+maxAcousticCo	0.1;
+
+//functions
+//{
+//	#includeFunc residuals
+//}
+
+functions
+{
+	MachNumber
+	{
+	    #includeEtc	"caseDicts/postProcessing/fields/MachNo";
+	}
+	moleFractions
+	{
+
+	    type                 psiReactionThermoMoleFractions;
+
+	    libs                 (fieldFunctionObjects);
+
+	}
+}
+
+// ************************************************************************* //

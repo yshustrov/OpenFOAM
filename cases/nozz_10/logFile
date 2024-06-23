@@ -1,0 +1,202 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _14aeaf8dab-20211220 OPENFOAM=2112 version=v2112
+Arch   : "LSB;label=32;scalar=64"
+Exec   : gmshToFoam ss03_crit_coarse_1.msh
+Date   : Jun 13 2023
+Time   : 23:06:31
+Host   : yury-VirtualBox
+PID    : 4754
+I/O    : uncollated
+Case   : /home/yury/OpenFOAM/My_cases/RNF_jet/may_2023/nozz_10
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Starting to read mesh format at line 2
+Read format version 4.1  ascii 0
+
+Starting to read physical names at line 5
+Physical names:6
+    Surface 2	front
+    Surface 3	back
+    Surface 4	inlet
+    Surface 5	wall_nozz
+    Surface 6	outlet
+    Volume 1	internal
+
+Starting to read points at line 56
+Vertices to be read: 23400
+Vertices read: 23400
+
+Starting to read cells at line 46893
+Cells to be read:34941
+
+Mapping region 2 to Foam patch 0
+Mapping region 4 to Foam patch 1
+Mapping region 5 to Foam patch 2
+Mapping region 6 to Foam patch 3
+Mapping region 3 to Foam patch 4
+Mapping region 1 to Foam cellZone 0
+Cells:
+    total: 11542
+    hex  : 11343
+    prism: 199
+    pyr  : 0
+    tet  : 0
+
+CellZones:
+Zone	Size
+    0	11542
+
+Patch 0 gets name front
+Patch 1 gets name inlet
+Patch 2 gets name wall_nozz
+Patch 3 gets name outlet
+Patch 4 gets name back
+
+--> FOAM Warning : 
+    From Foam::polyMesh::polyMesh(const Foam::IOobject&, Foam::pointField&&, const cellShapeList&, const faceListList&, const wordList&, const wordList&, const Foam::word&, const Foam::word&, const wordList&, bool)
+    in file meshes/polyMesh/polyMeshFromShapeMesh.C at line 646
+    Found 23399 undefined faces in mesh; adding to default patch defaultFaces
+Finding faces of patch 0
+Finding faces of patch 1
+Finding faces of patch 2
+Finding faces of patch 3
+Finding faces of patch 4
+
+FaceZones:
+Zone	Size
+
+Writing zone 0 to cellZone internal and cellSet
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _14aeaf8dab-20211220 OPENFOAM=2112 version=v2112
+Arch   : "LSB;label=32;scalar=64"
+Exec   : changeDictionary
+Date   : Jun 13 2023
+Time   : 23:06:31
+Host   : yury-VirtualBox
+PID    : 4755
+I/O    : uncollated
+Case   : /home/yury/OpenFOAM/My_cases/RNF_jet/may_2023/nozz_10
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 5(front inlet wall_nozz outlet back)
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 4(wall_nozz wall_end front back)
+--> FOAM Warning : 
+    From bool merge(bool, Foam::dictionary&, const Foam::dictionary&, bool, const Foam::HashTable<Foam::List<Foam::word> >&)
+    in file changeDictionary.C at line 304
+    Reading "system/changeDictionaryDict.boundary" at line 21 to 37
+    Ignoring non-existing entry wall_end
+fieldDict:
+{
+    front
+    {
+        type            wedge;
+        physicalType    patch;
+        nFaces          11542;
+        startFace       22827;
+    }
+    inlet
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          58;
+        startFace       34369;
+    }
+    wall_nozz
+    {
+        type            wall;
+        physicalType    patch;
+        nFaces          199;
+        startFace       34427;
+    }
+    outlet
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          58;
+        startFace       34626;
+    }
+    back
+    {
+        type            wedge;
+        physicalType    patch;
+        nFaces          11542;
+        startFace       34684;
+    }
+}
+
+Writing modified boundary
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _14aeaf8dab-20211220 OPENFOAM=2112 version=v2112
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -overwrite
+Date   : Jun 13 2023
+Time   : 23:06:31
+Host   : yury-VirtualBox
+PID    : 4756
+I/O    : uncollated
+Case   : /home/yury/OpenFOAM/My_cases/RNF_jet/may_2023/nozz_10
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "system/createPatchDict"
+
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+No patches removed.
+Writing repatched mesh to 0
+
+End
+

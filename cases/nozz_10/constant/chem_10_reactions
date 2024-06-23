@@ -1,0 +1,152 @@
+elements        1(AR);
+
+species         10(AR AR2 AR3 AR4 AR5 AR6 AR7 AR8 AR9 AR10);
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "3AR = AR2 + AR";
+        A               1.39833e11;
+        beta            -0.504;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR2 + AR = AR3";
+        A               2.25E+09;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR3 + AR = AR4";
+        A               2.92E+09;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR4 + AR = AR5";
+        A               4.06E+09;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR5 + AR = AR6";
+        A               6.77E+09;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR6 + AR = AR7";
+        A               1.32E+10;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR7 + AR = AR8";
+        A               2.27E+10;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR8 + AR = AR9";
+        A               3.15E+10;
+        beta            0.5;
+        Ta              0;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR9 + AR = AR10";
+        A               3.63E+10;
+        beta            0.5;
+        Ta              0;
+    }
+    
+    un-named-reaction-9
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR2 + AR = 3AR";
+        A               7.57E+10;
+        beta            3.68E-01;
+        Ta              143.41;
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR3 = AR2 + AR";
+        A               1.22E+09;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR4 = AR3 + AR";
+        A               1.58E+09;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-12
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR5 = AR4 + AR";
+        A               2.20E+09;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-13
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR6 = AR5 + AR";
+        A               3.67E+09;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-14
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR7 = AR6 + AR";
+        A               7.14E+09;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-15
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR8 = AR7 + AR";
+        A               1.23E+10;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-16
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR9 = AR8 + AR";
+        A               1.70E+10;
+        beta            1.37;
+        Ta              143.41;
+    }
+    un-named-reaction-17
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "AR10 = AR9 + AR";
+        A               1.97E+10;
+        beta            1.37;
+        Ta              143.41;
+    }
+}

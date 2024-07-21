@@ -3,14 +3,9 @@ EXE_INC = \
     -I$(LIB_SRC)/meshTools/lnInclude \
     -I$(LIB_SRC)/transportModels/compressible/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
-    -I$(HOME)/MutationPP/Mutationpp/src/general \
-    -I$(HOME)/MutationPP/Mutationpp/install/include/mutation++ \
-    -isystem$(HOME)/MutationPP/Mutationpp/install/include \
     -I$(LIB_SRC)/thermophysicalModels/thermophysicalProperties/lnInclude 
 
 LIB_LIBS = \
-    -L$(HOME)/MutationPP/Mutationpp/install/lib \
-    -lmutation++ \
     -lfiniteVolume \
     -lmeshTools \
     -lcompressibleTransportModels \

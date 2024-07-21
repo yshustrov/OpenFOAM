@@ -29,7 +29,6 @@ License
 
 #include "psiReactionThermo.H"
 #include "hePsiThermo.H"
-//#include "heMutThermo.H"
 
 
 #include "specie.H"
@@ -532,17 +531,6 @@ makeThermoPhysicsReactionThermos
 );
     
 // ************************************************************************* END POWER *************************************************************************
-
-//-------------------------------------------- mutThermo test
-/* makeThermoPhysicsReactionThermos
-(
-    psiThermo,
-    psiReactionThermo,
-    heMutThermo,
-    reactingMixture,
-    gas9EThermoPhysics
-); */
-//-------------------------------------------- end mutThermo test
 
 // Single-step reaction thermo for internal energy
 
